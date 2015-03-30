@@ -1,9 +1,8 @@
 require 'sinatra'
 
-get '/' do
-  "<div>
-  <img src='http://bit.ly/1eze8ae'>
-  </div>"
+get '/hello' do
+  @visitor = params[:name]
+  erb :index
 end
 
 get '/secret' do
